@@ -58,7 +58,7 @@ class PersonneController extends AbstractController
             return $this->json(['status' => 404, 'message' => 'Personne not found']);
         }
         try {
-            $errors = $validator->validate($personne);
+            $errors = $validator->validate($contenu);
             if (count($errors) > 0) {
                 return $this->json($errors, 400);
             }
